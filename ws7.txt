@@ -1,0 +1,13 @@
+Script started on 2022-10-25 23:23:11-04:00
+shivam@sjsu:~/worksheet7[shivam@sjsu worksheet7]$ history -c
+
+shivam@sjsu:~/worksheet7[shivam@sjsu worksheet7]$ grep 0195141261 amazon_reviews_us_Books_v1_02.tsv | cut -f 14 > 0195141261.txt 
+
+shivam@sjsu:~/worksheet7[shivam@sjsu worksheet7]$ sed "s/\.//g" 0195141261.txt | sed "s/,//g" | sed "s/'//g" | sed "s/;//g" | sedd "s/ and //g" | sed "s/ or //g" | sed "s/ if //g" | sed "s/ in //g" | sed "s/ it //g" | sed "s/ its //g"" | sed "s/and\/or//g" > temp
+
+shivam@sjsu:~/worksheet7[shivam@sjsu worksheet7]$ sed "s/<.. *\/*>//g" temp > output.txt
+
+shivam@sjsu:~/worksheet7[shivam@sjsu worksheet7]$ exit
+
+Script done on 2022-10-25 23:23:24-04:00
+

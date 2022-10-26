@@ -1,0 +1,5 @@
+   88  history >cmds.lo
+    1  script ws7.txt
+    2  grep 0195141261 amazon_reviews_us_Books_v1_02.tsv | cut -f 14 > 0195141261.txt
+    3  sed "s/\.//g" 0195141261.txt | sed "s/,//g" | sed "s/'//g" | sed "s/;//g" | sed "s/ and //g" | sed "s/ or //g" | sed "s/ if //g" | sed "s/ in //g" | sed "s/ it //g" | sed "s/ its //g" | sed "s/and\/or//g" > temp
+    4  sed "s/<.. *\/*>//g" temp > output.txt
